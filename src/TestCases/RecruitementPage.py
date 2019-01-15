@@ -15,7 +15,7 @@ class Recruitement_Page(unittest.TestCase):
     
     
     
-    #def click_On_Recruitement_Page(self):
+    def click_On_Recruitement_Page(self):
         self.driver.find_element_by_id(self.Recruitment_Section_id).click()
     
     
