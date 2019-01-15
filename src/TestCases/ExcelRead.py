@@ -16,16 +16,22 @@ class Excelread():
             row_data = []
 
             for curr_col in range(0, colcount, 1):
-                data = sheet.cell_value(curr_row, curr_col) # Read the data in the current cell
-                #print ( "data", data)
+                data = str(sheet.cell_value(curr_row, curr_col)) # Read the data in the current cell
+                print ( "data", data)
                 row_data.append( data )
 
-            result_data.append(row_data)
+            result_data.append(row_data) 
             
         return result_data
 
 
-# exlrd = Excelread()
-# data1 = exlrd.readExcelData()
-# for a in data1:
-#     for b in range(len(a)):
+exlrd = Excelread()
+data1 = exlrd.readExcelData()
+for a in data1:
+    print("a", a)
+    print(a[0])
+    print('lenght of a',len(a))
+    for b in range(len(a)):
+        print('b',b)
+        #print(a[b])
+        

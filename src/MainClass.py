@@ -53,6 +53,7 @@ class Test(unittest.TestCase):
         recpage.click_On_Recruitement_Page()
         
         time.sleep(5)
+        #recpage.get_Calendar_Date()
         recpage.fill_form()
         
 #         vals=recpage.get_DropDown_Values()
@@ -67,7 +68,7 @@ class Test(unittest.TestCase):
         
     
     def tearDown(self):
-        self.driver.close()
+        #self.driver.close()
         #self.driver.quit()
         print("Test Completed")
         
@@ -75,7 +76,7 @@ class Test(unittest.TestCase):
         
         
     if __name__=='__main__':
-        unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="C:/Users/kpanwar/eclipse-workspace/SeleniumPythonOne/reports"))
+        unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output=r"C:\Users\kpanwar\eclipse-workspace\SeleniumPythonOne\src\reports\Test.html"))
         
         
         
