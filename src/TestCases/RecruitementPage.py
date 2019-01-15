@@ -19,7 +19,7 @@ class Recruitement_Page():
     def get_DropDown_Values(self):
         self.driver.find_element_by_id(self.job_Title_dropDown_id).click()
         select = Select(self.driver.find_element_by_xpath('//*[@id="candidateSearch_jobTitle"]'))
-        #select.select_by_value("9")
+        select.select_by_value("9")
         options = [o.text for o in select.options] ;
         return pd.DataFrame(options)
         
@@ -31,19 +31,19 @@ class Recruitement_Page():
         
     def fill_form(self):
         #JobTitle Dropdowns selection
-#         self.driver.find_element_by_id(self.job_Title_dropDown_id).click()
-#         select = Select(self.driver.find_element_by_xpath('//*[@id="candidateSearch_jobTitle"]'))
-#     
-#         select.select_by_value("9")
-#         
-#         
-#         #Status Dropdwons selection
-#         self.driver.find_element_by_id(self.job_Title_dropDown_id).click()
-#     
-#         select = Select(self.driver.find_element_by_xpath('//*[@id="candidateSearch_status"]'))
-#         select.select_by_value("9")
-
-
+        self.driver.find_element_by_id(self.job_Title_dropDown_id).click()
+        select = Select(self.driver.find_element_by_xpath('//*[@id="candidateSearch_jobTitle"]'))
+     
+        select.select_by_value("9")
+         
+         
+        #Status Dropdwons selection
+        self.driver.find_element_by_id(self.job_Title_dropDown_id).click()
+     
+        select = Select(self.driver.find_element_by_xpath('//*[@id="candidateSearch_status"]'))
+        select.select_by_value("9")
+ 
+ 
         #Selecting Candidate name
 
             
