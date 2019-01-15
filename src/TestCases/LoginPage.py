@@ -24,7 +24,6 @@ class LoginPage():
         elem.click()
         
         
-    #def check_invalid_username_mesage(self):
-        #msg = self.driver.find_element_by_xpath(Locators.invalidUsername_message_xpath).text
-        #return msg
-        
+    def check_invalid_username_mesage(self):
+        msg = self.driver.find_element_by_xpath(Locators.invalidUsername_message_xpath).text
+        return msg
